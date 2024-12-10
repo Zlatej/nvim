@@ -12,14 +12,6 @@ return {
 	-- 		vim.cmd.colorscheme("rose-pine")
 	-- 	end,
 	-- },
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	priority = 1000,
-	-- 	name = "catppuccin",
-	-- 	init = function()
-	-- 		vim.cmd.colorscheme("catppuccin-mocha")
-	-- 	end,
-	-- },
 	{
 		"rebelot/kanagawa.nvim",
 		priority = 1000,
@@ -34,16 +26,6 @@ return {
 	-- 	priority = 1000, -- Make sure to load this before all the other start plugins.
 	-- 	init = function()
 	-- 		vim.cmd.colorscheme("tokyonight-night")
-	-- 	end,
-	-- },
-	-- {
-	-- 	"ilof2/posterpole.nvim",
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("posterpole").setup({
-	-- 			-- config here
-	-- 		})
-	-- 		vim.cmd("colorscheme posterpole")
 	-- 	end,
 	-- },
 	-- {
