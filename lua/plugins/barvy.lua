@@ -22,13 +22,6 @@ return {
 		end,
 	},
 	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	priority = 1000, -- Make sure to load this before all the other start plugins.
-	-- 	init = function()
-	-- 		vim.cmd.colorscheme("tokyonight-night")
-	-- 	end,
-	-- },
-	-- {
 	-- 	"vague2k/vague.nvim",
 	-- 	config = function()
 	-- 		require("vague").setup({
