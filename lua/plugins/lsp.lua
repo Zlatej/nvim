@@ -386,6 +386,7 @@ return { -- LSP Plugins
 						group_index = 0,
 					},
 					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp_signature_help" },
 					{ name = "luasnip" },
 					{ name = "path" },
 				},
@@ -408,7 +409,5 @@ return { -- LSP Plugins
 				border = "rounded",
 			},
 		},
-		-- or use config
-		-- config = function(_, opts) require'lsp_signature'.setup({you options}) end
 	},
 }
