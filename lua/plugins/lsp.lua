@@ -175,7 +175,15 @@ return { -- LSP Plugins
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				clangd = {},
-				gopls = {},
+				gopls = {
+					settings = {
+						gopls = {
+							experimental = {
+								fillstruct = true,
+							},
+						},
+					},
+				},
 				-- pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -220,6 +228,12 @@ return { -- LSP Plugins
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"gopls",
+					"pyright",
+					"clangd",
+				},
+				automatic_installation = true,
 				handlers = {
 					function(server_name)
 						local server = servers[server_name] or {}
@@ -269,6 +283,7 @@ return { -- LSP Plugins
 			formatters_by_ft = {
 				lua = { "stylua" },
 				cpp = { "clang-format" },
+				java = { "lsp" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
