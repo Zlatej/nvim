@@ -178,7 +178,7 @@ return { -- LSP Plugins
 				gopls = {
 					settings = {
 						gopls = {
-							experimental = {
+							analyses = {
 								fillstruct = true,
 							},
 						},
