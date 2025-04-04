@@ -154,6 +154,16 @@ return { -- LSP Plugins
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "[T]oggle Inlay [H]ints")
 					end
+
+					-- You will likely want to reduce updatetime which affects CursorHold
+					-- note: this setting is global and should be set only once
+					-- vim.o.updatetime = 250
+					-- vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+					-- 	group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
+					-- 	callback = function()
+					-- 		vim.diagnostic.open_float(nil, { focus = false })
+					-- 	end,
+					-- })
 				end,
 			})
 
@@ -430,6 +440,8 @@ return { -- LSP Plugins
 			handler_opts = {
 				border = "rounded",
 			},
+			hint_enable = false,
+			fix_pos = true,
 		},
 	},
 }
