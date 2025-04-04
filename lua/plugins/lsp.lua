@@ -284,6 +284,11 @@ return { -- LSP Plugins
 				lua = { "stylua" },
 				cpp = { "clang-format" },
 				java = { "lsp" },
+                                javascript = { "prettier" },
+                                typescript = { "prettier" },
+                                css = { "prettier" },
+                                scss = { "prettier" },
+                                html = { "prettier" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
