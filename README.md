@@ -1,4 +1,5 @@
-# Behold, the config
+<h1 align="center">One config to plug them all, in Neovim bind them</h1>
+
 based on [kickstart](https://github.com/nvim-lua/kickstart.nvim) and [primeagen's video](https://youtu.be/-ybCiHPWKNA?si=Uyu4S4j6HznlVLL_)
 
 ## Dependencies
