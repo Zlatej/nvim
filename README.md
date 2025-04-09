@@ -1,10 +1,13 @@
-<h1 align="center">One config to plug them all, in Neovim bind them</h1>
+<h1 align="center">one config to plug them all, in neovim bind them</h1>
 
-based on [kickstart](https://github.com/nvim-lua/kickstart.nvim) and [primeagen's video](https://youtu.be/-ybCiHPWKNA?si=Uyu4S4j6HznlVLL_)
+<p><i>shout out to <a href="https://github.com/nvim-lua/kickstart.nvim">kickstart.nvim</a> and 
+<a href="https://youtu.be/-ybCiHPWKNA?si=Uyu4S4j6HznlVLL_">primeagen's video</a></i></p>
 
-## Dependencies
-- [fzf](https://github.com/junegunn/fzf)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [gopls](https://github.com/golang/tools/tree/master/gopls)
-- [optionally nerdfont](https://www.nerdfonts.com/)
-- ...
+<h2>dependencies</h2>
+<ul>
+  <li><a href="https://github.com/junegunn/fzf">fzf</a></li>
+  <li><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a></li>
+  <li><a href="https://github.com/golang/tools/tree/master/gopls">gopls</a></li>
+  <li><a href="https://www.nerdfonts.com/">optionally nerdfont</a></li>
+  <li>...</li>
+</ul>
