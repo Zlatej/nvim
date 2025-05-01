@@ -27,13 +27,21 @@ return {
 		vim.keymap.set("n", "<leader>4", function()
 			harpoon:list():select(4)
 		end, { desc = "Harpoon 4" })
+		vim.keymap.set("n", "<leader>5", function()
+			harpoon:list():select(5)
+		end, { desc = "Harpoon 5" })
+		vim.keymap.set("n", "<leader>6", function()
+			harpoon:list():select(6)
+		end, { desc = "Harpoon 6" })
+		vim.keymap.set("n", "<leader>7", function()
+			harpoon:list():select(7)
+		end, { desc = "Harpoon 7" })
 
 		vim.keymap.set("n", "<leader>p", function()
 			harpoon:list():prev()
-		end, { desc = "Harpoon prev" })
+		end, { desc = "Harpoon [p]rev" })
 		vim.keymap.set("n", "<leader>n", function()
 			harpoon:list():next()
-		end, { desc = "Harpoon next" })
+		end, { desc = "Harpoon [n]ext" })
 	end,
 }
-
