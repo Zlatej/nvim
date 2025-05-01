@@ -18,6 +18,10 @@ return {
 				"vim",
 				"vimdoc",
 				"go",
+				"javascript",
+				"jsx",
+				"typescript",
+				"tsx",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
@@ -29,6 +33,7 @@ return {
 				additional_vim_regex_highlighting = { "ruby" },
 			},
 			indent = { enable = true, disable = { "ruby" } },
+			autotag = { enable = true },
 		},
 	},
 	{

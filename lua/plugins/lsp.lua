@@ -188,12 +188,19 @@ return { -- LSP Plugins
 				gopls = {
 					settings = {
 						gopls = {
+							gofumpt = true,
+							usePlaceholders = true,
+							staticcheck = true,
+							experimentalPostfixCompletions = true,
 							analyses = {
-								fillstruct = true,
+								-- fillstruct = true,
+								unusedparams = true,
+								shadow = true,
 							},
 						},
 					},
 				},
+				jdtls = {},
 				-- pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -294,11 +301,11 @@ return { -- LSP Plugins
 				lua = { "stylua" },
 				cpp = { "clang-format" },
 				java = { "lsp" },
-                                javascript = { "prettier" },
-                                typescript = { "prettier" },
-                                css = { "prettier" },
-                                scss = { "prettier" },
-                                html = { "prettier" },
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				css = { "prettier" },
+				scss = { "prettier" },
+				html = { "prettier" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
@@ -328,12 +335,12 @@ return { -- LSP Plugins
 					-- `friendly-snippets` contains a variety of premade snippets.
 					--    See the README about individual language/framework/plugin snippets:
 					--    https://github.com/rafamadriz/friendly-snippets
-					-- {
-					--   'rafamadriz/friendly-snippets',
-					--   config = function()
-					--     require('luasnip.loaders.from_vscode').lazy_load()
-					--   end,
-					-- },
+					{
+						"rafamadriz/friendly-snippets",
+						config = function()
+							require("luasnip.loaders.from_vscode").lazy_load()
+						end,
+					},
 				},
 			},
 			"saadparwaiz1/cmp_luasnip",
@@ -417,9 +424,9 @@ return { -- LSP Plugins
 						group_index = 0,
 					},
 					{ name = "nvim_lsp" },
-					{ name = "nvim_lsp_signature_help" },
 					{ name = "luasnip" },
 					{ name = "path" },
+					{ name = "nvim_lsp_signature_help" },
 				},
 			})
 		end,
@@ -444,4 +451,5 @@ return { -- LSP Plugins
 			fix_pos = true,
 		},
 	},
+	-- java
 }
