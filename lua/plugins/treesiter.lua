@@ -19,7 +19,6 @@ return {
 				"vimdoc",
 				"go",
 				"javascript",
-				"jsx",
 				"typescript",
 				"tsx",
 			},
@@ -33,7 +32,7 @@ return {
 				additional_vim_regex_highlighting = { "ruby" },
 			},
 			indent = { enable = true, disable = { "ruby" } },
-			autotag = { enable = true },
+			-- autotag = { enable = true },
 		},
 	},
 	{
