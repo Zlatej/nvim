@@ -68,6 +68,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 					"--glob=!**/dist/*",
 					"--glob=!**/yarn.lock",
 					"--glob=!**/package-lock.json",
+					"--glob=!**/node_modules/*",
 				},
 				--   mappings = {
 				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
@@ -91,6 +92,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 						"--glob=!**/dist/*",
 						"--glob=!**/yarn.lock",
 						"--glob=!**/package-lock.json",
+						"--glob=!**/node_modules/*",
 					},
 				},
 			},
