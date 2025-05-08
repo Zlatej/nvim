@@ -387,13 +387,27 @@ return { -- LSP Plugins
 					-- If you prefer more traditional completion keymaps,
 					-- you can uncomment the following lines
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
-					["<Tab>"] = cmp.mapping.select_next_item(),
+					-- ["<Tab>"] = cmp.mapping.select_next_item(),
+					["<Tab>"] = cmp.mapping(function(fallback)
+						local copilot = require("copilot.suggestion")
+
+						if copilot.is_visible() then
+							copilot.accept()
+						elseif cmp.visible() then
+							cmp.select_next_item()
+						elseif luasnip.expand_or_locally_jumpable() then
+							luasnip.expand_or_jump()
+						else
+							fallback()
+						end
+					end, { "i", "s" }),
 					["<S-Tab>"] = cmp.mapping.select_prev_item(),
 
 					-- Manually trigger a completion from nvim-cmp.
 					--  Generally you don't need this, because nvim-cmp will display
 					--  completions whenever it has completion options available.
 					["<C-Space>"] = cmp.mapping.complete({}),
+					["<C-_>"] = cmp.mapping.close(),
 
 					-- Think of <c-l> as moving to the right of your snippet expansion.
 					--  So if you have a snippet that's like:
@@ -427,6 +441,12 @@ return { -- LSP Plugins
 					{ name = "luasnip" },
 					{ name = "path" },
 					{ name = "nvim_lsp_signature_help" },
+					{ name = "copilot" },
+				},
+				window = {
+					documentation = {
+						border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+					},
 				},
 			})
 		end,
@@ -451,5 +471,4 @@ return { -- LSP Plugins
 			fix_pos = true,
 		},
 	},
-	-- java
 }
