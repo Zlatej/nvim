@@ -1,4 +1,4 @@
 return {
-	{ "unblevable/quick-scope" },
+	{ "ggandor/leap.nvim" },
 	{ "mg979/vim-visual-multi" },
 }
