@@ -8,6 +8,7 @@ return {
 			-- I don't find the panel useful.
 			panel = { enabled = false },
 			suggestion = {
+				-- enabled = false,
 				auto_trigger = true,
 				enabled = false,
 				-- Use alt to interact with Copilot.
