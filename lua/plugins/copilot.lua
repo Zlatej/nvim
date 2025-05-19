@@ -9,6 +9,7 @@ return {
 			panel = { enabled = false },
 			suggestion = {
 				auto_trigger = true,
+				enabled = false,
 				-- Use alt to interact with Copilot.
 				keymap = {
 					-- Disable the built-in mapping, we'll configure it in nvim-cmp.
