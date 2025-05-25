@@ -19,24 +19,24 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = {
--- 		"javascript",
--- 		"typescript",
--- 		"typescriptreact",
--- 		"javascriptreact",
--- 		"html",
--- 		"css",
--- 		"scss",
--- 		"json",
--- 		"yaml",
--- 	},
--- 	callback = function()
--- 		vim.bo.tabstop = 2
--- 		vim.bo.softtabstop = 2
--- 		vim.bo.shiftwidth = 2
--- 	end,
--- })
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {
+		"javascript",
+		"typescript",
+		"typescriptreact",
+		"javascriptreact",
+		"html",
+		"css",
+		"scss",
+		"json",
+		"yaml",
+	},
+	callback = function()
+		vim.bo.tabstop = 2
+		vim.bo.softtabstop = 2
+		vim.bo.shiftwidth = 2
+	end,
+})
 
 vim.o.smartindent = true
 
