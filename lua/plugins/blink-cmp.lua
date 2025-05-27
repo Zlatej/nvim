@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"rafamadriz/friendly-snippets",
 		"moyiz/blink-emoji.nvim",
+        "L3MON4D3/LuaSnip",
 	},
 
 	version = "1.*",
