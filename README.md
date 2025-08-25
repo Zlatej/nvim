@@ -7,7 +7,6 @@
 <ul>
   <li><a href="https://github.com/junegunn/fzf">fzf</a></li>
   <li><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a></li>
-  <li><a href="https://github.com/golang/tools/tree/master/gopls">gopls</a></li>
-  <li><a href="https://www.nerdfonts.com/">optionally nerdfont</a></li>
+  <li><a href="https://github.com/golang/tools/tree/master/gopls">mby gopls, ikd</a></li>
   <li>...</li>
 </ul>
