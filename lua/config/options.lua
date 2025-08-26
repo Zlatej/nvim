@@ -126,3 +126,8 @@ vim.api.nvim_set_keymap("n", "Y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "Y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "YY", '"+yy', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "YY", '"+yy', { noremap = true, silent = true })
+
+-- Coppy line info
+vim.keymap.set("n", "<leader>cp", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p") .. ":" .. vim.fn.line("."))
+end, { desc = "Copy file path + line to clipboard" })
