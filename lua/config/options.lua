@@ -127,7 +127,11 @@ vim.api.nvim_set_keymap("v", "Y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "YY", '"+yy', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "YY", '"+yy', { noremap = true, silent = true })
 
--- Coppy line info
-vim.keymap.set("n", "<leader>cp", function()
-  vim.fn.setreg("+", vim.fn.expand("%:p") .. ":" .. vim.fn.line("."))
-end, { desc = "Copy file path + line to clipboard" })
+vim.keymap.set("n", "<leader>m", function()
+	local files = vim.fn.glob("main.*", false, true)
+	if #files > 0 then
+		vim.cmd("e " .. files[1])
+	else
+		print("No main file found in current directory")
+	end
+end, { desc = "Open main file in current directory" })
