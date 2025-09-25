@@ -70,6 +70,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 					"--glob=!**/package-lock.json",
 					"--glob=!**/node_modules/*",
 					"--glob=!**/bin/*",
+					"--glob=!**/.zig-cache/*",
 				},
 				--   mappings = {
 				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
@@ -95,6 +96,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 						"--glob=!**/package-lock.json",
 						"--glob=!**/node_modules/*",
 						"--glob=!**/bin/*",
+						"--glob=!**/.zig-cache/*",
 					},
 				},
 			},
