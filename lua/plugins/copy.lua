@@ -1,8 +1,12 @@
 return {
-	"zlatej/copy.nvim",
+	"zlatej/ctx-copy.nvim",
 	config = function()
-		require("copy").setup({
-			prefix = "/home/matej/repos/",
+		require("ctx-copy").setup({
+			prefixes = {
+				vim.fn.expand("~"),
+				"repos/",
+                "tmp",
+			},
 		})
 	end,
 }
