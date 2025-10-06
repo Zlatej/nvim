@@ -127,6 +127,7 @@ vim.api.nvim_set_keymap("v", "Y", '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "YY", '"+yy', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "YY", '"+yy', { noremap = true, silent = true })
 
+-- Open main.* file
 vim.keymap.set("n", "<leader>m", function()
 	local files = vim.fn.glob("main.*", false, true)
 	if #files > 0 then
@@ -135,3 +136,13 @@ vim.keymap.set("n", "<leader>m", function()
 		print("No main file found in current directory")
 	end
 end, { desc = "Open main file in current directory" })
+
+-- Fill struct
+vim.keymap.set("n", "<leader>fs", function()
+	vim.lsp.buf.code_action({
+		filter = function(action)
+			return action.title:match("Fill ") or action.title:match("fill ")
+		end,
+		apply = true,
+	})
+end, { desc = "Fill struct" })
