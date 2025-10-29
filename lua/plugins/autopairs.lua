@@ -13,11 +13,11 @@ return {
 		npairs.setup(opts)
 
 		local is_template = require("util.pair").is_template
-		local semicolon = require("util.pair").struct_class_semicolon
+		-- local semicolon = require("util.pair").struct_class_semicolon
 
 		npairs.add_rules({
 			rule("<", ">"):with_pair(cond.none()):with_move(cond.done()):use_key(">"),
-			rule("{", "};", { "cpp", "c" }):with_pair(semicolon),
+			-- rule("{", "};", { "cpp", "c" }):with_pair(semicolon),
 		})
 
 		vim.keymap.set("i", "<", is_template)
