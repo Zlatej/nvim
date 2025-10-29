@@ -82,7 +82,6 @@ vim.o.scrolloff = 12
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-vim.keymap.set("i", "jj", "<Esc>")
 
 -- Diagnostic keymaps
 vim.diagnostic.config({ virtual_text = true })
