@@ -3,7 +3,7 @@ return {
 
 	-- cursor stuff
 	{ "mg979/vim-visual-multi" },
-	{ "karb94/neoscroll.nvim", opts = { duration_multiplier = 0.4 } },
+	{ "karb94/neoscroll.nvim", opts = { duration_multiplier = 0.35 } },
 	{
 		"sphamba/smear-cursor.nvim",
 		opts = {
