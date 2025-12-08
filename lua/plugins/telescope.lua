@@ -71,6 +71,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 					"--glob=!**/node_modules/*",
 					"--glob=!**/bin/*",
 					"--glob=!**/.zig-cache/*",
+					"--glob=!**/target/*",
 				},
 				--   mappings = {
 				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
@@ -97,6 +98,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 						"--glob=!**/node_modules/*",
 						"--glob=!**/bin/*",
 						"--glob=!**/.zig-cache/*",
+						"--glob=!**/target/*",
 					},
 				},
 			},
