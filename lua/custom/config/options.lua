@@ -1,15 +1,18 @@
 vim.o.colorcolumn = "120"
 
+-- termguicolors must be set, yapyapyap
+vim.o.termguicolors = true
+
 -- cycle lines
 vim.cmd("set whichwrap+=h,l")
 vim.cmd("set whichwrap+=<,>,[,]")
 vim.o.mouse = "a"
 
 -- -- Tab
--- vim.o.tabstop = 4
--- vim.o.softtabstop = 4
--- vim.o.shiftwidth = 4
--- vim.o.expandtab = true
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 
 -- vim.api.nvim_create_autocmd("FileType", {
 -- 	pattern = {
@@ -46,10 +49,6 @@ vim.diagnostic.config({ virtual_text = true, float = { border = "rounded" } })
 -- vim.keymap.set("n", "K", function()
 -- 	vim.lsp.buf.hover({ border = "rounded" })
 -- end, { desc = "LSP Hover" })
-
--- vim.keymap.set("n", "]d", function() vim.diagnostic.jump({count=1, float=true}) end, { desc = "Go to next [D]iagnostics message" })
--- vim.keymap.set("n", "[d", function() vim.diagnostic.jump({count=-1, float=true}) end, { desc = "Go to previous [D]iagnostics message" })
-
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
