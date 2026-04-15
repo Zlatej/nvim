@@ -746,22 +746,22 @@ require('lazy').setup({
       --   end
       -- end,
       formatters_by_ft = {
-		lua = { "stylua" },
-		cpp = { "clang-format" },
-		-- java = { "lsp" },
-		javascript = { "prettierd" },
-		javascriptreact = { "prettierd" },
-		typescript = { "prettierd" },
-		typescriptreact = { "prettierd" },
-		css = { "prettierd" },
-		scss = { "prettierd" },
-		html = { "prettierd" },
-		go = { "goimports", "gofmt" },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+		    lua = { "stylua" },
+			cpp = { "clang-format" },
+			-- java = { "lsp" },
+			javascript = { "prettierd" },
+			javascriptreact = { "prettierd" },
+			typescript = { "prettierd" },
+			typescriptreact = { "prettierd" },
+			css = { "prettierd" },
+			scss = { "prettierd" },
+		    html = { "prettierd" },
+		    go = { "goimports", "gofmt" },
+            -- Conform can also run multiple formatters sequentially
+            python = { "isort", "black" },
+            --
+            -- You can use 'stop_after_first' to run the first available formatter from the list
+            -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
   },
@@ -788,9 +788,7 @@ require('lazy').setup({
           --    https://github.com/rafamadriz/friendly-snippets
           {
             'rafamadriz/friendly-snippets',
-            config = function()
-              require('luasnip.loaders.from_vscode').lazy_load()
-            end,
+            config = function() require('luasnip.loaders.from_vscode').lazy_load() end,
           },
         },
         opts = {},
@@ -857,7 +855,7 @@ require('lazy').setup({
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true, window = { border = 'rounded' } },
     },
-    opts_extend = {"sources.default"},
+    opts_extend = {'sources.default'},
   },
 
   -- { -- You can easily change to a different colorscheme.
