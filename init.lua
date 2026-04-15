@@ -147,7 +147,7 @@ vim.o.splitbelow = true
 --  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
 --   See `:help lua-options`
 --   and `:help lua-guide-options`
-vim.o.list = true
+vim.o.list = false
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
@@ -231,7 +231,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Custom options
-require('custom.config.options')
+require 'custom.config.options'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -698,17 +698,17 @@ require('lazy').setup({
       --   end
       -- end,
       formatters_by_ft = {
-				lua = { "stylua" },
-				cpp = { "clang-format" },
-				-- java = { "lsp" },
-				javascript = { "prettierd" },
-				javascriptreact = { "prettierd" },
-				typescript = { "prettierd" },
-				typescriptreact = { "prettierd" },
-				css = { "prettierd" },
-				scss = { "prettierd" },
-				html = { "prettierd" },
-				go = { "goimports", "gofmt" },
+		lua = { "stylua" },
+		cpp = { "clang-format" },
+		-- java = { "lsp" },
+		javascript = { "prettierd" },
+		javascriptreact = { "prettierd" },
+		typescript = { "prettierd" },
+		typescriptreact = { "prettierd" },
+		css = { "prettierd" },
+		scss = { "prettierd" },
+		html = { "prettierd" },
+		go = { "goimports", "gofmt" },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
