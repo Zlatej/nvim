@@ -46,9 +46,9 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.diagnostic.config({ virtual_text = true, float = { border = "rounded" } })
 
 -- Add borders to LSP hover (Shift+K) and signature help windows
--- vim.keymap.set("n", "K", function()
--- 	vim.lsp.buf.hover({ border = "rounded" })
--- end, { desc = "LSP Hover" })
+vim.keymap.set("n", "K", function()
+	vim.lsp.buf.hover({ border = "rounded" })
+end, { desc = "LSP Hover" })
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
