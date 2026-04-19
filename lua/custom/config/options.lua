@@ -42,8 +42,8 @@ vim.o.smartindent = true
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- Diagnostic keymaps
-vim.diagnostic.config({ virtual_text = true, float = { border = "rounded" } })
+-- Diagnostic keymaps - might be overriding with vim.diagnostic.config in init.lua
+-- vim.diagnostic.config({ virtual_text = true, float = { border = "rounded" } })
 
 -- Add borders to LSP hover (Shift+K) and signature help windows
 vim.keymap.set("n", "K", function()
