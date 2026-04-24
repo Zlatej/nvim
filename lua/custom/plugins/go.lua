@@ -3,6 +3,7 @@ return {
   dependencies = { -- optional packages
     'ray-x/guihua.lua',
     'neovim/nvim-lspconfig',
+    'theHamsta/nvim-dap-virtual-text',
     -- { "nvim-treesitter/nvim-treesitter", branch = 'main' } -- optional for master version
   },
   opts = function()
