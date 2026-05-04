@@ -8,4 +8,7 @@ return {
     'nvim-telescope/telescope.nvim', -- optional
   },
   config = true,
+  keys = {
+    { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Show Neogit UI' },
+  },
 }
