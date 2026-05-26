@@ -1,25 +1,13 @@
-return {
-  'ray-x/go.nvim',
-  dependencies = { -- optional packages
-    'ray-x/guihua.lua',
-    'neovim/nvim-lspconfig',
-    'theHamsta/nvim-dap-virtual-text',
-    -- { "nvim-treesitter/nvim-treesitter", branch = 'main' } -- optional for master version
-  },
-  opts = function()
-    require('go').setup(opts)
-    -- local format_sync_grp = vim.api.nvim_create_augroup('GoFormat', {})
-    -- vim.api.nvim_create_autocmd('BufWritePre', {
-    --   pattern = '*.go',
-    --   callback = function() require('go.format').goimports() end,
-    --   group = format_sync_grp,
-    -- })
-    return {
-      -- lsp_keymaps = false,
-      -- other options
-    }
-  end,
-  event = { 'CmdlineEnter' },
-  ft = { 'go', 'gomod' },
-  build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+-- Go development tools
+-- https://github.com/ray-x/go.nvim
+--
+-- nvim-lspconfig is already installed in init.lua, so it is not listed here.
+-- Binaries can be installed/updated with `:lua require('go.install').update_all_sync()`.
+
+vim.pack.add {
+  'https://github.com/ray-x/go.nvim',
+  'https://github.com/ray-x/guihua.lua',
+  'https://github.com/theHamsta/nvim-dap-virtual-text',
 }
+
+require('go').setup {}
