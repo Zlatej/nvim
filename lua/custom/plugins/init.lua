@@ -3,69 +3,11 @@
 --
 -- See the kickstart.nvim README for more information
 
----@module 'lazy'
----@type LazySpec
-return {
-  -- cursor stuff
-  { 'mg979/vim-visual-multi' },
-  { 'karb94/neoscroll.nvim', opts = { duration_multiplier = 0.35 } },
-  {
-    'sphamba/smear-cursor.nvim',
-    opts = {
-      stiffness = 0.6, -- 0.6      [0, 1]
-      -- trailing_stiffness = 0.6, -- 0.45     [0, 1]
-      stiffness_insert_mode = 0.6, -- 0.5      [0, 1]
-      -- trailing_stiffness_insert_mode = 0.6, -- 0.5      [0, 1]
-      -- damping = 0.95, -- 0.85     [0, 1]
-      -- damping_insert_mode = 0.95, -- 0.9      [0, 1]
-      distance_stop_animating = 0.5, -- 0.1      > 0
-      trailing_stiffness = 0.5,
-      matrix_pixel_threshold = 0.5,
-      time_interval = 7,
-    },
-  },
-  {
-    'hedyhli/outline.nvim',
-    lazy = true,
-    cmd = { 'Outline', 'OutlineOpen' },
-    keys = { -- Example mapping to toggle outline
-      { '<leader>o', '<cmd>Outline<CR>', desc = 'Toggle outline' },
-    },
-    opts = {
-      outline_window = {
-        position = 'left',
-        width = 25,
-      },
-    },
-  },
-  {
-    'chentoast/marks.nvim',
-    event = 'VeryLazy',
-    opts = {},
-  },
-  { 'theprimeagen/vim-be-good' },
-  {
-    'ThePrimeagen/refactoring.nvim',
-    dependencies = {
-      'lewis6991/async.nvim',
-    },
-    lazy = false,
-    init = function()
-      vim.keymap.set({ 'n', 'x' }, '<leader>rs', function()
-        -- this keymap doesn't select any textobject by default, so you may need to provide one each time you use it.
-        require('refactoring').select_refactor()
-      end, { desc = 'Select refactor' })
-    end,
-  },
-  {
-    'stevearc/oil.nvim',
-    ---@module 'oil'
-    ---@type oil.SetupOpts
-    opts = {},
-    -- Optional dependencies
-    dependencies = { { 'nvim-mini/mini.icons', opts = {} } },
-    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-    lazy = false,
-  },
-}
+-- Iterate over all Lua files in the plugins directory and load them
+local plugins_dir = vim.fs.joinpath(vim.fn.stdpath 'config', 'lua', 'custom', 'plugins')
+for file_name, type in vim.fs.dir(plugins_dir) do
+  if type == 'file' and file_name:match '%.lua$' and file_name ~= 'init.lua' then
+    local module = file_name:gsub('%.lua$', '')
+    require('custom.plugins.' .. module)
+  end
+end
