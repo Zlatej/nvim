@@ -17,9 +17,7 @@ vim.g.rustaceanvim = {
         cargo = {
           allFeatures = true,
         },
-        checkOnSave = {
-          command = 'clippy',
-        },
+        checkOnSave = true,
         inlayHints = { locationLinks = false },
         diagnostics = {
           enable = true,
@@ -33,5 +31,5 @@ vim.g.rustaceanvim = {
 }
 
 vim.pack.add {
-  { src = 'https://github.com/mrcjkb/rustaceanvim', version = vim.version.range '6.*' },
+  { src = 'https://github.com/mrcjkb/rustaceanvim', version = vim.version.range '9.*' },
 }
