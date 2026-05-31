@@ -1,8 +1,7 @@
 -- Colorscheme
 -- https://github.com/vague2k/vague.nvim
 
-vim.pack.add { 'https://github.com/vague2k/vague.nvim' }
-require('vague').setup {}
+vim.pack.add { 'https://github.com/vague-theme/vague.nvim' }
 vim.cmd.colorscheme 'vague'
 
 -- Other themes I've tried, kept for reference:
