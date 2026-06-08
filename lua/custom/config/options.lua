@@ -74,13 +74,3 @@ vim.keymap.set("n", "<leader>m", function()
 		print("No main file found in current directory")
 	end
 end, { desc = "Open main file in current directory" })
-
--- Fill struct
-vim.keymap.set("n", "<leader>fs", function()
-	vim.lsp.buf.code_action({
-		filter = function(action)
-			return action.title:match("Fill ") or action.title:match("fill ")
-		end,
-		apply = true,
-	})
-end, { desc = "Fill struct" })
