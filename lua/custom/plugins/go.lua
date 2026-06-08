@@ -16,16 +16,14 @@ require('go').setup {}
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'go',
   callback = function(ev)
-    local map = function(lhs, rhs, desc)
-      vim.keymap.set('n', lhs, rhs, { buffer = ev.buf, desc = desc })
-    end
+    local map = function(lhs, rhs, desc) vim.keymap.set('n', lhs, rhs, { buffer = ev.buf, desc = desc }) end
     -- Code generation
     map('<leader>ci', '<cmd>GoImpl<cr>', 'Go: implement interface')
     map('<leader>fs', '<cmd>GoFillStruct<cr>', 'Go: fill struct')
     map('<leader>ie', '<cmd>GoIfErr<cr>', 'Go: insert if err')
     -- Struct tags
-    map('<leader>at', '<cmd>GoAddTag<cr>', 'Go: add struct tags')
-    map('<leader>rt', '<cmd>GoRmTag<cr>', 'Go: remove struct tags')
+    map('<leader>ta', ':GoAddTag ', 'Go: add struct tags (type, e.g. json/toml/bson)')
+    map('<leader>tr', ':GoRmTag ', 'Go: remove struct tags (type, e.g. json/toml/bson)')
     -- Tests
     map('<leader>tf', '<cmd>GoTestFunc<cr>', 'Go: test function')
     map('<leader>tF', '<cmd>GoTestFile<cr>', 'Go: test file')
