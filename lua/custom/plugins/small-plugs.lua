@@ -55,3 +55,4 @@ vim.keymap.set({ 'n', 'x' }, '<leader>rs', function() require('refactoring').sel
 vim.pack.add { 'https://github.com/stevearc/oil.nvim' }
 require('mini.icons').setup {} -- provided by mini.nvim (already installed in init.lua)
 require('oil').setup {}
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory (Oil)' })
