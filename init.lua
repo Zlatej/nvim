@@ -747,6 +747,7 @@ do
     --
     -- But for many setups, the LSP (`ts_ls`) will work just fine
     ts_ls = {},
+    tombi = {},
 
     stylua = {}, -- Used to format Lua code
 
