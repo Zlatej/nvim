@@ -738,7 +738,11 @@ do
   ---@type table<string, vim.lsp.Config>
   local servers = {
     clangd = {},
-    gopls = {},
+    gopls = {
+      settings = {
+        gopls = { gofumpt = true },
+      },
+    },
     pyright = {},
     -- rust_analyzer = {},
     --
@@ -852,7 +856,7 @@ do
       css = { 'prettierd' },
       scss = { 'prettierd' },
       html = { 'prettierd' },
-      go = { 'goimports', 'gofmt' },
+      go = { lsp_format = 'prefer' },
       -- Conform can also run multiple formatters sequentially
       python = { 'isort', 'black' },
       --
