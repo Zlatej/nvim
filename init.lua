@@ -751,6 +751,11 @@ do
     --
     -- But for many setups, the LSP (`ts_ls`) will work just fine
     ts_ls = {},
+    angularls = {},
+    cssls = {},
+    emmet_language_server = {
+      filetypes = { 'html', 'css', 'scss', 'less', 'javascriptreact', 'typescriptreact' },
+    },
     tombi = {},
 
     stylua = {}, -- Used to format Lua code
@@ -810,6 +815,7 @@ do
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
     -- You can add other tools here that you want Mason to install
+    'prettierd',
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -856,6 +862,7 @@ do
       css = { 'prettierd' },
       scss = { 'prettierd' },
       html = { 'prettierd' },
+      htmlangular = { 'prettierd' },
       go = { 'goimports', lsp_format = 'last' },
       -- Conform can also run multiple formatters sequentially
       python = { 'isort', 'black' },
@@ -964,7 +971,26 @@ do
   vim.pack.add { { src = gh 'nvim-treesitter/nvim-treesitter', version = 'main' } }
 
   -- Ensure basic parsers are installed
-  local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'go' }
+  local parsers = {
+    'bash',
+    'c',
+    'diff',
+    'html',
+    'lua',
+    'luadoc',
+    'markdown',
+    'markdown_inline',
+    'query',
+    'vim',
+    'vimdoc',
+    'go',
+    'typescript',
+    'tsx',
+    'javascript',
+    'css',
+    'scss',
+    'jsdoc',
+  }
   require('nvim-treesitter').install(parsers)
 
   ---@param buf integer
