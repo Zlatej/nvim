@@ -521,6 +521,7 @@ do
         '--glob=!**/bin/*',
         '--glob=!**/.zig-cache/*',
         '--glob=!**/target/*',
+        '--glob=!**/graphify-out/*',
       },
       -- mappings = {
       --   i = { ['<c-enter>'] = 'to_fuzzy_refine' },
@@ -548,6 +549,7 @@ do
           '--glob=!**/bin/*',
           '--glob=!**/.zig-cache/*',
           '--glob=!**/target/*',
+          '--glob=!**/graphify-out/*',
         },
       },
     },
