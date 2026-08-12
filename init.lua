@@ -874,6 +874,7 @@ do
       scss = { 'prettierd' },
       html = { 'prettierd' },
       htmlangular = { 'prettierd' },
+      markdown = { 'prettierd' },
       go = { 'goimports', lsp_format = 'last' },
       -- Conform can also run multiple formatters sequentially
       python = { 'isort', 'black' },
