@@ -6,7 +6,7 @@ vim.pack.add {
   -- 'https://github.com/MeanderingProgrammer/render-markdown.nvim',
   'https://github.com/iamcco/markdown-preview.nvim',
 }
-require('render-markdown').setup {} -- only mandatory if you want to set custom options
+-- require('render-markdown').setup {} -- only mandatory if you want to set custom options
 
 vim.g.mkdp_filetypes = { 'markdown' }
 vim.g.mkdp_auto_close = 0
