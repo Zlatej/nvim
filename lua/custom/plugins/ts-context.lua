@@ -8,6 +8,6 @@ require('treesitter-context').setup {
   multiline_threshold = 3,
   on_attach = function(buf)
     local ft = vim.bo[buf].filetype
-    return ft == 'typescriptreact' or ft == 'html' or ft == 'tsx'
+    return ft == 'typescriptreact' or ft == 'html' or ft == 'tsx' or ft == 'go'
   end,
 }
