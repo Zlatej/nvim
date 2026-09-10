@@ -4,6 +4,9 @@
 vim.pack.add { 'https://github.com/vague-theme/vague.nvim' }
 vim.cmd.colorscheme 'vague'
 
+vim.api.nvim_set_hl(0, 'Normal', { bg = '#0e0e0e' })
+-- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#0e0e0e' })
+
 -- Other themes I've tried, kept for reference:
 --
 -- vim.pack.add { 'https://github.com/binbandit/achroma.nvim' }
