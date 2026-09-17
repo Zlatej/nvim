@@ -7,6 +7,8 @@ vim.o.termguicolors = true
 vim.cmd 'set whichwrap+=h,l'
 vim.cmd 'set whichwrap+=<,>,[,]'
 vim.o.mouse = 'a'
+-- scroll one line per mouse wheel tick
+vim.o.mousescroll = 'ver:1,hor:1'
 
 -- -- Tab
 vim.o.tabstop = 4
